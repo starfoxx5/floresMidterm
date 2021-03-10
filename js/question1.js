@@ -1,7 +1,5 @@
 //Given the following Array with employee objects
 
-//Given the following Array with employee objects
-
 const employeeList = [
 
   {
@@ -115,12 +113,14 @@ const employeeList = [
 //    Iterate through the number of tests, adding a value to the scores between 61 and 100.
 
  
-
- 
-
 // << YOUR CODE HERE >>
 
- 
+employeeList.scores = [];
+while(employeeList.scores.length <= 8){
+    var scores = Math.floor(Math.random() * 100) + 1;
+    if(scores.indexOf(i) === -1) scores.push(i);
+}
+console.log(arr);
 
  
 
@@ -176,11 +176,24 @@ const employeeList = [
 
  
 
- 
-
 // << YOUR CODE HERE >>
 
- 
+const avg = array =>
+  array.reduce((sum, value) => sum + value, 0) / array.length;
+
+const minSC = array => Math.min(employeeList.scores);
+
+console.log(
+    employeeList.filter(employeeList.name).map(employeeList => {
+      return {
+        name: employeeList.name,
+        scores: employeeList.scores,
+        numberofTests: employeeList.scores.count(),
+        minScore: minSC(employeeList.scores),
+        avgScore: avg(employeeList.scores)
+      };
+    })
+  );
 
  
 
